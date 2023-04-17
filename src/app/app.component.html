@@ -7,8 +7,10 @@
     </div>
     <div class="col-lg-6">
       <app-list-citas
-        [listadoCitas]="listCitas"
+        [listadoCitas]="citas"
         (deleteCita)="eliminarCitaListado($event)"
+        (ordenar)="orderCitas()"
+        (unOrder)="notOrder()"
       ></app-list-citas>
     </div>
   </div>

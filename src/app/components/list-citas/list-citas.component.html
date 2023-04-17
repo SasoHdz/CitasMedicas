@@ -4,6 +4,8 @@
   </div>
 </div>
 <div *ngIf="listadoCitas.length >0" class="container-citas">
+  <button type="button" class="btn btn-secondary" (click)="onSort()" >Ordernar</button>
+  <button type="button" class="btn btn-secondary ms-2" (click)="unSort()" >Sin Orden</button>
   <div *ngFor="let cita of listadoCitas; let i = index" class="bg-body m-4">
     <p class="card-text"><span>Nombre..:</span>{{cita.nombre}}</p>
     <p class="card-text"><span>Fecha...:</span>{{cita.fecha}}</p>

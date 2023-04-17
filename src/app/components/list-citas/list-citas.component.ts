@@ -9,6 +9,8 @@ export class ListCitasComponent {
 
   @Input() listadoCitas: any;
   @Output() deleteCita = new EventEmitter<number>();
+  @Output() ordenar = new EventEmitter();
+  @Output() unOrder = new EventEmitter();
 
   constructor(){
 
@@ -20,5 +22,13 @@ export class ListCitasComponent {
 
   eliminarCita(index:number){
     this.deleteCita.emit(index);
+  }
+
+  onSort(){
+    this.ordenar.emit();
+  }
+
+  unSort(){
+    this.unOrder.emit();
   }
 }
